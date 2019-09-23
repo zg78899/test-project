@@ -1,85 +1,119 @@
-@charset "uft-8";
+@charset "utf-8";
+
 *, *::before, *::after{
-   box-sizing: border-box;
+    box-sizing: border-box;
 }
 html{
-   font-size: 10px;
+    font-size: 10px;
 }
 a{
-   text-decoration: none;
-   color: #000;
+    text-decoration: none;
+    color: #000;
 }
 
 .header{
-   background: #fff;
-   display: flex;
-   justify-content: space-between;
-   padding: 0 50px;
-   position: relative;
-   border-bottom: 1px solid #aaa;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    /* position: relative; */
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #aaa;
 }
-.kakao-logo{
-   background: url('/images/logo_black.svg') no-repeat;
+.kakao-logo {
+   position: relative;
    margin: 0;
    width: 116px;
    height: 20px;
-   text-indent: 300px;
-   overflow: hidden;
+   line-height: 20px;
    white-space: nowrap;
+   overflow: hidden;
    margin: auto 0;
+
+   text-align: center;
+   font-size: 0;
+   
+   
+}.kakao-logo ::after{
+   
+   background: url("/images/logo_black.svg") no-repeat;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   
+
 }
 .a11y-hidden {
-   position: absolute;
-   height: 1px;
-   width: 1px;
-   overflow: hidden;
-   clip: rect(1px 1px 1px 1px);
-   clip: rect(1px, 1px, 1px, 1px);
-   white-space: nowrap;
-}
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+ }
 .main-menu{
-   font-size: 1.5rem;
-   background: skyblue;
-   list-style-type: none;
-   padding: 30px 15px;
-   margin: 0;
-   display: flex;
-   justify-content: space-between;
-   width: 420px;
-   line-height: 47px;
-
-}.menu-act .btn-menu::after{
-   content: "";
+    font-size: 1.5rem;
+    /* background: skyblue; */
+    list-style-type: none;
+    padding: 0px 15px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 420px;
+}
+.main-menu-list{
+    /* background: orange; */
+    padding: 30px 20px;
+}
+.main-menu > li:hover .sub-container, .main-menu > li:focus .sub-container{
    display: block;
-   border-top: 2px solid #181818;
+    box-shadow: 0 2px 0 0 #000;
+}
+.main-menu a{
+    padding: 30px 0;
+}
+.main-menu a:hover{
+    text-decoration: underline;
 }
 .sub-container{
-   /* display: none; */
-   background: pink;
-   padding: 60px 120px;
-   position: absolute;
-   width: 100%;
-   top: 80px;
-   left: 0;
+    /* display: none; */
+    /* background: pink; */
+    background: #fff;
+    padding: 60px 120px 35px 120px;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    display: none;
 }
+.main-menu > li:hover .sub-container{
+    display: block;
+ }
+/* .tab-act, .sub-container1{
+    display: block;
+} */
 .sub-menu{
-   background: teal;
-   font-size: 1.7rem;
-   list-style-type: none;
-   display: flex;
-   justify-content: space-between;
-   padding-left: 0;
+    /* background: teal; */
+    font-size: 1.7rem;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    height: 100%;
 }
 .sub-menu li{
-   background: lime;
-
-   
-}.sub-menu a:hover{
-   text-decoration: underline;
+    /* background: lime; */
+    /* margin-bottom: 25px; */
+    text-align: center;
+    margin-bottom: 25px;
 }
 .sub-menu-item{
-   list-style-type: none;
-   font-size: 1.3rem;
-   padding-left: 0;
-
+    list-style-type: none;
+    font-size: 1.3rem;
+    padding-left: 0;
+    margin-top: 25px;
 }
