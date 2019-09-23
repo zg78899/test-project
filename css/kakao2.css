@@ -1,6 +1,65 @@
-@charset "utf-8";
-*{
-    /* padding: 0;
-    margin: 0; */
-    
+@charset “utf-8”;
+, ::before, *::after{
+   box-sizing: border-box;
+}
+html{
+   font-size: 10px;
+}
+a{
+   text-decoration: none;
+   color: #000;
+}
+.header{
+   background: #fff;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 50px;
+   position: relative;
+   border-bottom: 1px solid #aaa;
+}
+.kakao-logo{
+   background: url(‘/images/logo_black.svg’) no-repeat;
+   margin: 0;
+   width: 116px;
+   height: 20px;
+   text-indent: 300px;
+   overflow: hidden;
+   white-space: nowrap;
+   margin: auto 0;
+}
+.main-menu{
+   font-size: 1.5rem;
+   background: skyblue;
+   list-style-type: none;
+   padding: 30px 15px;
+   margin: 0;
+   display: flex;
+   justify-content: space-between;
+   width: 420px;
+}
+.sub-container{
+   /* display: none; */
+   background: pink;
+   padding: 60px 120px;
+   position: absolute;
+   width: 100%;
+   top: 80px;
+   left: 0;
+}
+.sub-menu{
+   background: teal;
+   font-size: 1.7rem;
+   list-style-type: none;
+   display: flex;
+   justify-content: space-between;
+   padding-left: 0;
+}
+.sub-menu li{
+   background: lime;
+   padding-bottom:
+}
+.sub-menu-item{
+   list-style-type: none;
+   font-size: 1.3rem;
+   padding-left: 0;
 }
