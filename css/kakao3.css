@@ -6,11 +6,15 @@
 html{
     font-size: 10px;
 }
+body{
+    margin: 0;
+}
 a{
     text-decoration: none;
     color: #000;
+    font: inherit;
 }
-
+/* 헤더 영역 */
 .header{
     background: #fff;
     display: flex;
@@ -20,6 +24,7 @@ a{
     position: fixed;
     width: 100%;
     border-bottom: 1px solid #aaa;
+    z-index: 1;
 }
 .kakao-logo{
     width: 116px;
@@ -108,4 +113,143 @@ a{
     font-size: 1.3rem;
     padding-left: 0;
     margin-top: 25px;
+}
+/* 메인 콘텐츠 영역 */
+/* 섹션 1 */
+.section1{
+    background-image: url('/images/bg_main_3.jpg');
+    background-size: cover;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    height: 680px;
+    position: relative;
+}
+.section1-heading{
+    margin: 0;
+    font-weight: 200;
+    font-size: 5.5rem;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top: 228px;
+}
+.move-download-app{
+    padding-left: 0;
+    font-size: 2.2rem;
+    font-weight: 200;
+    display: flex;
+    justify-content: space-between;
+    width: 455px;
+    margin: 0 auto;
+    list-style-type: none;
+    margin-top: 280px;
+}
+.move-download-app a{
+    background: transparent;
+    display: inline-block;
+    width: 220px;
+    height: 65px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 5px;
+    color: #fff;
+    line-height: 2.9;
+}
+.move-playstore, .move-appstore{
+    text-align: center;
+}
+.move-playstore span, .move-appstore span{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 40px;
+    vertical-align: middle;
+    background-image: url('/images/img_kabang.png');
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+}
+.move-playstore span{
+    background-position: 86% 81%;
+}
+.move-appstore span{
+    background-position: 95% 82%;
+}
+.btn-loandoc-submit{
+    width: 340px;
+    height: 65px;
+    margin: 0;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 5px;
+    background: rgb(254, 218, 10);
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 2.0rem;
+    box-shadow: #333 2px 2px 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-loandoc-submit span{
+    font-size: 1.4rem;
+}
+.btn-bar{
+    display: inline-block;
+    width: 1px;
+    height: 15px;
+    background: rgb(192,165,5);
+}
+.doc-submit{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 25px;
+    width: 16px;
+    height: 25px;
+    background-image: url('/images/img_kabang.png');
+    background-position: 81% 17%;
+}
+/* 섹션 2 */
+.section2{
+    height: 750px;
+    background-color: rgb(251,251,251);
+
+}
+.section2-heading{
+    background: red;
+    width: 300px;
+    font-size: 3.0rem;
+    font-weight: 200;
+    margin: 0;
+}
+.section2-brief{
+    background: lime;
+    font-size: 1.5rem;;
+}
+.btn_account{
+    display: inline-block;
+    font-size: 1.7rem;
+    width: 258px;
+    height: 52px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 3;
+}
+.btn_account span{
+    display: inline-block;
+    width: 7px;
+    height: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 10px;
+    background-image: url('/images/home_arr.png');
+    background-size: 7px 10px;
+    margin-left: 5px;
+}
+
+.section2 img{
+    widows: 456px;
+    height: 551px;
 }
