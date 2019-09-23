@@ -16,7 +16,9 @@ a{
     display: flex;
     justify-content: space-between;
     padding: 0 50px;
-    position: relative;
+    /* position: relative; */
+    position: fixed;
+    width: 100%;
     border-bottom: 1px solid #aaa;
 }
 .kakao-logo{
@@ -40,38 +42,62 @@ a{
  }
 .main-menu{
     font-size: 1.5rem;
-    background: skyblue;
+    /* background: skyblue; */
     list-style-type: none;
-    padding: 30px 15px;
+    padding: 0px 15px;
     margin: 0;
     display: flex;
     justify-content: space-between;
     width: 420px;
 }
+.main-menu-list{
+    /* background: orange; */
+    padding: 30px 20px;
+}
+.main-menu .main-menu-list:hover, .main-menu .main-menu-list:active{
+    box-shadow: 0 2px 0 0 #000;
+}
+.main-menu a{
+    padding: 30px 0;
+}
+.main-menu a:hover{
+    text-decoration: underline;
+}
 .sub-container{
     /* display: none; */
-    background: pink;
-    padding: 60px 120px;
+    /* background: pink; */
+    background: #fff;
+    padding: 60px 120px 35px 120px;
     position: absolute;
     width: 100%;
     top: 80px;
     left: 0;
+    display: none;
 }
+.main-menu > li:hover .sub-container{
+    display: block;
+ }
+/* .tab-act, .sub-container1{
+    display: block;
+} */
 .sub-menu{
-    background: teal;
+    /* background: teal; */
     font-size: 1.7rem;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     padding-left: 0;
+    height: 100%;
 }
 .sub-menu li{
-    background: lime;
-    padding-bottom: 
+    /* background: lime; */
+    /* margin-bottom: 25px; */
+    text-align: center;
+    margin-bottom: 25px;
 }
 .sub-menu-item{
     list-style-type: none;
     font-size: 1.3rem;
     padding-left: 0;
-
+    margin-top: 25px;
 }
