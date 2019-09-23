@@ -1,5 +1,5 @@
-@charset “utf-8”;
-, ::before, *::after{
+@charset "uft-8";
+*, *::before, *::after{
    box-sizing: border-box;
 }
 html{
@@ -9,6 +9,7 @@ a{
    text-decoration: none;
    color: #000;
 }
+
 .header{
    background: #fff;
    display: flex;
@@ -18,7 +19,7 @@ a{
    border-bottom: 1px solid #aaa;
 }
 .kakao-logo{
-   background: url(‘/images/logo_black.svg’) no-repeat;
+   background: url('/images/logo_black.svg') no-repeat;
    margin: 0;
    width: 116px;
    height: 20px;
@@ -26,6 +27,15 @@ a{
    overflow: hidden;
    white-space: nowrap;
    margin: auto 0;
+}
+.a11y-hidden {
+   position: absolute;
+   height: 1px;
+   width: 1px;
+   overflow: hidden;
+   clip: rect(1px 1px 1px 1px);
+   clip: rect(1px, 1px, 1px, 1px);
+   white-space: nowrap;
 }
 .main-menu{
    font-size: 1.5rem;
@@ -36,6 +46,12 @@ a{
    display: flex;
    justify-content: space-between;
    width: 420px;
+   line-height: 47px;
+
+}.menu-act .btn-menu::after{
+   content: "";
+   display: block;
+   border-top: 2px solid #181818;
 }
 .sub-container{
    /* display: none; */
@@ -56,10 +72,14 @@ a{
 }
 .sub-menu li{
    background: lime;
-   padding-bottom:
+
+   
+}.sub-menu a:hover{
+   text-decoration: underline;
 }
 .sub-menu-item{
    list-style-type: none;
    font-size: 1.3rem;
    padding-left: 0;
+
 }
