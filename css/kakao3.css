@@ -16,7 +16,9 @@ a{
     display: flex;
     justify-content: space-between;
     padding: 0 50px;
-    position: relative;
+    /* position: relative; */
+    position: fixed;
+    width: 100%;
     border-bottom: 1px solid #aaa;
 }
 .kakao-logo{
@@ -64,6 +66,7 @@ a{
 .sub-container{
     /* display: none; */
     /* background: pink; */
+    background: #fff;
     padding: 60px 120px 35px 120px;
     position: absolute;
     width: 100%;
