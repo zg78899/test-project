@@ -14,9 +14,18 @@ a{
     color: #000;
     font: inherit;
 }
+.a11y-hidden {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+ }
 /* 헤더 영역 */
 .header{
-    background: transparent;
+    background: #fff;
     display: flex;
     justify-content: space-between;
     padding: 0 170px;
@@ -29,33 +38,11 @@ a{
 .kakao-logo{
     width: 116px;
     height: 20px;
-    /* text-indent: 300px; */
-    /* overflow: hidden;
-    white-space: nowrap; */
     margin: auto 0;
     position: relative;
 }
-/* .kakao-logo::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #fff url('/images/logo_black.svg');
-} */
-.a11y-hidden {
-    position: absolute;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px 1px 1px 1px);
-    clip: rect(1px, 1px, 1px, 1px);
-    white-space: nowrap;
- }
 .main-menu{
     font-size: 1.5rem;
-    /* background: skyblue; */
     list-style-type: none;
     padding: 0px 15px;
     margin: 0;
@@ -64,7 +51,6 @@ a{
     width: 420px;
 }
 .main-menu-list{
-    /* background: orange; */
     padding: 30px 20px;
 }
 .main-menu .main-menu-list:hover, .main-menu .main-menu-list:active{
@@ -77,8 +63,6 @@ a{
     text-decoration: underline;
 }
 .sub-container{
-    /* display: none; */
-    /* background: pink; */
     background: #fff;
     padding: 60px 120px 35px 120px;
     position: absolute;
@@ -90,11 +74,7 @@ a{
 .main-menu > li:hover .sub-container, .main-menu > li:focus .sub-container{
     display: block;
  }
-/* .tab-act, .sub-container1{
-    display: block;
-} */
 .sub-menu{
-    /* background: teal; */
     font-size: 1.7rem;
     list-style-type: none;
     display: flex;
@@ -103,8 +83,6 @@ a{
     height: 100%;
 }
 .sub-menu li{
-    /* background: lime; */
-    /* margin-bottom: 25px; */
     text-align: center;
     margin-bottom: 25px;
 }
@@ -167,6 +145,7 @@ a{
     background-repeat: no-repeat;
     width: 35px;
     height: 35px;
+    margin-right: 10px;
 }
 .move-playstore span{
     background-position: 86% 81%;
@@ -318,4 +297,58 @@ a{
     margin: 0 auto;
     grid-column: 7/ span 2;
     grid-row: 6/ span 1;
+}
+/* 섹션8 - 캐러셀 */
+.section8{
+    background: #fff;
+    height: 1060px;
+    padding-top: 170px;
+}
+.section8-explain{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 80px;
+}
+/* 하단 두 속성은 통일하여 사용할 수 있으나, 협업 시 알아보기 쉽도록 따로 씀 */
+.section8-heading{
+    font-size: 4.0rem;
+    font-weight: 200;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.section8-brief{
+    font-size: 1.6rem;
+    font-weight: 200;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: center;
+}
+/* 버튼 속성은 통일하여 사용할 수 있으나, 협업 시 알아보기 쉽도록 따로 씀 */
+.btn_checkcard{ 
+    display: inline-block;
+    font-size: 1.7rem;
+    width: 258px;
+    height: 52px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 3;
+}
+.btn_checkcard span{
+    display: inline-block;
+    width: 7px;
+    height: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 10px;
+    background-image: url('/images/home_arr.png');
+    background-size: 7px 10px;
+    margin-left: 5px;
+}
+/* 캐러셀 */
+.home-checkcard{
+    width: 280px;
+    height: 443px;
+    margin: 0 auto;
 }
