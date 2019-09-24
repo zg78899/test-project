@@ -7,6 +7,9 @@
 html{
     font-size: 10px;
 }
+body{
+    margin: 0;
+}
 a{
     text-decoration: none;
     color: #000;
@@ -170,8 +173,6 @@ a{
 /* section 6 전체 영역 */
 .section6{
     background: #fff;
-    margin: 0;
-    padding: 0;
     width: 100vw;
     height: 750px;
     display: grid;
@@ -191,7 +192,8 @@ a{
 
 /* section6 메인 컨텐츠 폰트 색 */
 .main-contents6 h3,
-.main-contents6 p{
+.main-contents6 p,
+.main-contents6 a{
     color: #000;
 }
 
@@ -209,7 +211,6 @@ a{
 /* section6 a 링크 */
 .main-contents6 a{
     display: block;
-    color: #000;
     font-size: 1.5rem;
     border: 1px solid #c2c2c2;
     border-radius: 2px;
@@ -225,4 +226,86 @@ a{
     height: 610px;
     grid-column: 4/8;
     grid-row: 4/17;
+}
+
+
+/* section7 */
+.section7{
+    width: 100vw;
+    height: 930px;
+    background-color: #333b58;
+    display: grid;
+    grid-template-columns: repeat(16,100px);
+    grid-template-rows: repeat(16,1fr);
+}
+
+/* section7 메인 컨텐츠 */
+.main-contents7{
+    grid-column: 5/14;
+    grid-row: 4/ span2;
+    margin-left: 50px;
+}
+
+/* 폰트 크기와 색상 */
+.main-contents7 h3,
+.main-contents7 p,
+.main-contents7 a {
+    color: #fff;
+}
+
+.main-contents7 h3{
+    font-size: 3.9rem;
+    font-weight: 400;
+    margin: 21px 0;
+}
+
+.main-contents7 p{
+    margin: 21px 0;
+    font-size: 1.5rem;
+    text-indent: 120px;
+}
+
+.main-contents7 a{
+    display: inline-block;
+    border: 1px solid #fff;
+    width: 164px;
+    height: 50px;
+    border-radius: 2px;
+    margin: 5px 3px;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 3;
+}
+.main-contents7 a:first-of-type{
+    margin-left: 32px;
+}
+
+/* section7 이미지 크기 */
+.loan{
+    width: 500px;
+    height: 523px;
+    grid-column: 6/span 3;
+    grid-row: 8/17;
+    margin-left: 80px;
+    margin-bottom: 0;
+}
+/* 달 그림 */
+.circle {
+    background-color: transparent;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset -25px 5px 0 3px #fff;
+    transform: rotate(50deg);
+    grid-column: 14/span 2;
+    grid-row: 5/span 2;
+}
+
+
+/* section8 */
+.section8{
+    width: 100vw;
+    height: 1065px;
+    position: relative;
+    background-color: yellow;
 }
