@@ -9,6 +9,8 @@ html{
 a{
     text-decoration: none;
     color: #000;
+}body{
+    margin: 0;
 }
 
 .header{
@@ -68,6 +70,7 @@ a{
 .main-menu-list{
     /* background: orange; */
     padding: 30px 20px;
+
 }
 .main-menu > li:hover .sub-container, .main-menu > li:focus .sub-container{
    display: block;
@@ -75,6 +78,7 @@ a{
 }
 .main-menu a{
     padding: 30px 0;
+    
 }
 .main-menu a:hover{
     text-decoration: underline;
@@ -116,4 +120,146 @@ a{
     font-size: 1.3rem;
     padding-left: 0;
     margin-top: 25px;
+
+}.section2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    width: 920px;
+    /* background: yellow; */
+    
+
+}.mobile-account-heading{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 400;
+
+}
+.mobile-account p{
+    font-size: 15px;
+    font-weight: 300;
+   
+}.mobile-account a{
+    line-height: 52px;
+    border: 1px solid #000000;
+    width: 260px;
+    height: 52px;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    
+
+}
+.phone1{
+    box-sizing: content-box;
+    width: 465px;
+    height: 550px;
+    
+
+}
+.section3{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px 0 190px;
+    /* margin: 0 auto; */
+    /* width: 990px; */
+    background: #fafafa;
+    
+   
+}.section3::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.deposit{
+    
+    float: left;
+    display: block;
+    /* border: 1px solid #aaa; */
+    margin-top: 200px;
+    
+
+}
+.deposit-heading{  
+    /* background: #008000; */
+    font-size: 3rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+
+}.deposit p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.deposit a{
+    line-height: 52px;
+    border: 1px solid #000000;
+    display: inline-block;
+    width: 158px;
+    height: 52px;
+    /* background: orange; */
+    font-size: 15px;
+    text-align: center;
+    
+
+}
+.term{
+    width: 522px;
+    height: 124px;
+    /* background: yellow; */
+    display: block;
+    margin-top: 20px;
+
+}.phones{
+    float: right;
+   
+    /* background: white; */
+}
+.phone2{
+    width: 460px;
+    height: 680px;
+    /* background: purple; */
+
+    
+}.section4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    width: 850px;
+    /* background: yellow; */
+    
+
+}.saving-account-heading{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 400;
+
+}
+.saving-account p{
+    font-size: 15px;
+    font-weight: 300;
+   
+}.saving-account a{
+    line-height: 52px;
+    border: 1px solid #000000;
+    width: 260px;
+    height: 52px;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    
+
+}
+.saving{
+    box-sizing: content-box;
+    width: 352px;
+    height: 528px;
+    
+
 }
