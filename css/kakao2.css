@@ -122,6 +122,7 @@ a{
     margin-top: 25px;
 
 }.section2{
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,9 +161,10 @@ a{
 
 }
 .section3{
+    height: 840px;
     display: flex;
     justify-content: space-between;
-    padding: 0 80px 0 190px;
+    padding: 120px 80px 70px 190px;
     /* margin: 0 auto; */
     /* width: 990px; */
     background: #fafafa;
@@ -226,6 +228,9 @@ a{
 
     
 }.section4{
+
+    padding: 130px 0 150px 0;
+    height: 800px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -257,9 +262,120 @@ a{
 
 }
 .saving{
+
     box-sizing: content-box;
     width: 352px;
     height: 528px;
     
+}.footer-bg{
+    background: #EEEEEE;
+}
+.footer{
+    padding-top: 15px;
+    height: 160px;
+    width: 1100px;
+    background: #EEEEEE;
+    margin: 0 auto;
 
+}.service-use{
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+
+}.service-use li:nth-child(n+2)::before{
+    content:"ㅣ";
+    color: #aaa;
+    padding-right:20px;
+}
+.service-use li{
+    display: inline-block;
+
+}.service-use a{
+    padding: 8px 0;
+
+}.address,.copyright{
+    display: inline-block;
+}.address,.copyright{
+    font-size: 12px;
+}
+.address{
+    font-style: normal;
+    /* background:yellow; */
+
+}.copyright{
+    /* background: skyblue; */
+    margin-left: 5px;
+
+}.footer-bottom{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    /* background: pink; */
+   
+
+
+}.footer-bottom::after{
+    content:'';
+    display: block;
+    clear: both;
+
+}
+.web-accessiblilty-insurance{
+    display: flex;
+    /* background: purple; */
+    float: left;
+    margin: 0;
+   
+}.web-accessiblilty-insurance img{
+    width: 48px;
+    height: 32px;
+}
+
+.web-accessiblilty-insurance figcaption{
+    font-size: 16px;
+    line-height: 35px;
+    padding-left: 5px;
+   
+}
+.share-information{
+   
+    
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    float: right;
+    display: flex;
+    width: 134px;
+    
+}
+.facebook-icon,.blog-icon,.naverpost-icon,.youtube-icon{
+    background-image: url("/images/img_kabang.png");
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 25px;
+    padding: 0 10px;
+
+
+}
+.facebook-icon{
+    width: 10px;
+    height: 20px;
+    background-position: 29% 97%;
+}
+.blog-icon{
+    width: 14px;
+    height: 20px;
+    background-position: 34% 97%;
+}
+.naverpost-icon{
+    width: 14px;
+    height: 20px;
+    background-position: 97% 97%;
+}
+.youtube-icon{
+    width: 25px;
+    height: 20px;
+    background-position: 40% 96%;
 }
