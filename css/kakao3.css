@@ -16,15 +16,15 @@ a{
 }
 /* 헤더 영역 */
 .header{
-    background: #fff;
+    background: transparent;
     display: flex;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 170px;
     /* position: relative; */
     position: fixed;
     width: 100%;
     border-bottom: 1px solid #aaa;
-    z-index: 1;
+    z-index: 10;
 }
 .kakao-logo{
     width: 116px;
@@ -214,18 +214,24 @@ a{
 .section2{
     height: 750px;
     background-color: rgb(251,251,251);
-
+    display: grid;
+    grid-template-columns: repeat(16, 100px);
+    grid-template-rows: repeat(16, minmax(50px, auto));
+}
+.section2-explain{
+    grid-row: 7/ span 4;
+    grid-column: 9/ span 4;
 }
 .section2-heading{
-    background: red;
-    width: 300px;
-    font-size: 3.0rem;
+    font-size: 4.0rem;
     font-weight: 200;
     margin: 0;
 }
 .section2-brief{
-    background: lime;
-    font-size: 1.5rem;;
+    font-size: 1.6rem;
+    font-weight: 200;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 .btn_account{
     display: inline-block;
@@ -248,8 +254,68 @@ a{
     background-size: 7px 10px;
     margin-left: 5px;
 }
-
 .section2 img{
     widows: 456px;
     height: 551px;
+    grid-row: 3/ span 8;
+    grid-column: 3/ span 3;
+}
+/* 섹션9 */
+.section9{
+    background-color: rgb(247, 247, 247);
+    height: 1045px;
+    display: grid;
+    grid-template-columns: repeat(16, 100px);
+    grid-template-rows: repeat(16, minmax(50px, auto));
+}
+.section9-heading{
+    font-size: 4.0rem;
+    font-weight: 200;
+    margin: 0;
+    text-align: center;
+    grid-column: 4/ span 8;
+    grid-row: 4/ span 2;
+}
+.marketing{
+    list-style-type: none;
+    padding-left; 0;
+    display: flex;
+    justify-content: space-between;
+    grid-column: 3/ span 10;
+    grid-row: 12/ span 3;
+}
+.marketing em{
+    font-style: normal;
+    font-size: 2.0rem;
+}
+[class^="marketing-copy"]{
+    text-align: center;
+}
+[class^="marketing-copy"] p{
+    font-size: 1.4rem;
+    font-weight: 200;
+    line-height: 1.5;
+    color: #666;
+}
+.marketing-copy2{
+    width: 350px;
+}
+.marketing-copy3{
+    margin-left: auto;
+    margin-right: 20px;
+}
+.section9 img{
+    width: 1020px;
+    height: 270px;
+    grid-column: 3/ span 10;
+    grid-row: 8/ span 3;
+}
+.section9-middle-bar{
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    background: #000;
+    margin: 0 auto;
+    grid-column: 7/ span 2;
+    grid-row: 6/ span 1;
 }
