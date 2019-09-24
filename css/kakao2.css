@@ -121,7 +121,9 @@ a{
     padding-left: 0;
     margin-top: 25px;
 
-}.section2{
+}
+
+.section2{
     
     display: flex;
     justify-content: space-between;
@@ -267,7 +269,9 @@ a{
     width: 352px;
     height: 528px;
     
-}.footer-bg{
+}
+
+.footer-bg{
     background: #EEEEEE;
 }
 .footer{
