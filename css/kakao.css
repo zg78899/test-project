@@ -10,8 +10,9 @@ html{
 }
 body{
     margin: 0;
-    min-width: 1300px;
+    min-width: 1200px;
     font-weight: 200;
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
@@ -60,6 +61,18 @@ p{
     text-align: center;
 }
 
+/* 가로 1100px 고정 및 그리드 */
+.wrapper{
+    width: 1100px;
+    margin: 0 auto;
+    /* position: relative; */
+}
+.wrapper-grid{
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(16,minmax(50px,auto));
+}
+
 /* 헤더 영역 */
 .header{
     background: #fff;
@@ -75,13 +88,14 @@ p{
 .kakao-logo{
     width: 116px;
     height: 20px;
-    margin: auto 0;
-    position: relative;
+    margin-top: 20px;
+    /* position: relative; */
 }
 .main-menu{
     font-size: 1.5rem;
+    font-weight: 400;
     list-style-type: none;
-    padding: 0px 15px;
+    padding: 0px 10px;
     margin: 0;
     display: flex;
     justify-content: space-between;
@@ -94,14 +108,14 @@ p{
     box-shadow: inset 0 -2px 0 0 #000;
 }
 .main-menu a{
-    padding: 30px 0;
+    margin: 30px 0;
 }
 .main-menu a:hover{
     text-decoration: underline;
 }
 .sub-container{
     background: #fff;
-    padding: 60px 120px 35px 120px;
+    padding: 60px 240px 35px 240px;
     position: absolute;
     width: 100%;
     top: 83px;
@@ -132,31 +146,33 @@ p{
 /* 메인 콘텐츠 영역 */
 /* 섹션 1 */
 .section1{
+    height: 680px;
+    width: 100vw;
     background-image: url('/images/bg_main_3.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 50%;
-    background-repeat: no-repeat;
-    height: 680px;
     position: relative;
 }
+
 .section1-heading{
-    margin: 0;
+    margin: 0 auto;
+    width: 100%;
     font-size: 5.3rem;
     font-weight: 100;
     text-align: center;
     color: #fff;
-    position: relative;
-    top: 228px;
+    padding-top: 228px;
 }
 .move-download-app{
     padding-left: 0;
-    font-size: 2.2rem;
+    font-size: 2rem;
     display: flex;
     justify-content: space-between;
     width: 455px;
     margin: 0 auto;
     list-style-type: none;
-    margin-top: 280px;
+    margin-top: 65px;
 }
 .move-download-app a{
     background: transparent;
@@ -167,6 +183,10 @@ p{
     border-radius: 5px;
     color: #fff;
     line-height: 2.9;
+    font-weight: 100;
+}
+.move-download-app a:hover{
+    text-decoration: underline;
 }
 .move-playstore, .move-appstore{
     text-align: center;
@@ -198,9 +218,10 @@ p{
     border-radius: 5px;
     background: rgb(254, 218, 10);
     position: absolute;
-    bottom: 30px;
     right: 30px;
-    font-size: 2.0rem;
+    bottom: 30px;
+    font-size: 1.7rem;
+    font-weight: 500;
     box-shadow: #333 2px 2px 2px;
     display: flex;
     justify-content: space-between;
@@ -208,10 +229,11 @@ p{
 }
 .btn-loandoc-submit span{
     font-size: 1.4rem;
+    font-weight: 400;
 }
 .btn-bar{
     display: inline-block;
-    width: 1px;
+    width: 1.5px;
     height: 15px;
     background: rgb(192,165,5);
 }
@@ -225,17 +247,22 @@ p{
     background-image: url('/images/img_kabang.png');
     background-position: 81% 17%;
 }
+
 /* 섹션 2 */
 .section2{
+    width: 1100px;
+    margin: 0 auto;
     height: 750px;
-    background-color: rgb(251,251,251);
+    background-color: #fff;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, minmax(50px, auto));
 }
 .section2-explain{
-    grid-row: 8/ span 4;
+    grid-row: 6/ span 4;
     grid-column: 10/ span 4;
+    width: 360px;
+    margin-left: 40px;
 }
 .section2-heading{
     margin: 0;
@@ -243,7 +270,6 @@ p{
 }
 .section2-brief{
     line-height: 1.5;
-    margin-bottom: 30px;
 }
 .btn_account{
     display: inline-block;
@@ -253,35 +279,34 @@ p{
 .section2 img{
     width: 456px;
     height: 551px;
-    grid-row: 4/ span 8;
-    grid-column: 4/ span 3;
+    grid-row: 3/ span 8;
+    grid-column: 2/ span 3;
+    margin-left: 20px;
 }
 
-/* 섹션 3,4 */
+/* 섹션 3 */
 .section3{
+    width: 100vw;
     height: 840px;
     display: flex;
     justify-content: space-between;
-    padding: 120px 80px 70px 190px;
     /* margin: 0 auto; */
     /* width: 990px; */
     background: #fafafa;
-    
-   
-}.section3::after{
-    content: "";
-    display: block;
-    clear: both;
+    white-space: nowrap;
+    /* background: orange; */
 }
-
+.section3-po{
+    position: relative;
+    width: 1100px;
+}
 .deposit{
-    
-    float: left;
-    display: block;
+    padding-top: 210px;
+    margin-left: 100px;
+    display: inline-block;
+    /* float: left; */
     /* border: 1px solid #aaa; */
-    margin-top: 200px;
-    
-
+    /* border: 1px solid #aaaa; */
 }
 .deposit-heading{  
     /* background: #008000; */
@@ -299,93 +324,95 @@ p{
     height: 124px;
     /* background: yellow; */
     display: block;
-    margin-top: 20px;
-
-}.phones{
-    float: right;
-   
-    /* background: white; */
+    margin-top: 60px;
 }
-.phone2{
+.phone{
+    display: inline-block;
     width: 460px;
     height: 680px;
+    transform: translateX(5rem);
+    opacity: 0;
+    /* position: absolute;
+    left: 650px;
+    top: 125px; */
     /* background: purple; */
+}
 
-    
-}.section4{
+@keyframes slide-right {
+	to {
+        opacity: 1;
+		transform: none;
+    }
+}
 
-    padding: 130px 0 150px 0;
-    height: 800px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.phone-active{
+	animation: slide-right 0.4s 0.85s ease-in-out forwards;
+}
 
+/* 섹션4 */
+.section4{
+    width: 1100px;
     margin: 0 auto;
-    width: 850px;
-    /* background: yellow; */
-    
-
-}.saving-account-heading{
-    margin: 0;
+    /* background: skyblue; */
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,minmax(50px,auto)); 
 }
-.saving-account p{
-    font-size: 15px;
+.saving-account{
+    grid-column: 10/span 6;
+    grid-row: 6;
+    margin-left: 40px;
 }
-.saving-account a{
-    line-height: 52px;
-    border: 1px solid #000000;
+.btn-common{
     width: 260px;
-    height: 52px;
     display: block;
-    text-align: center;
-    font-size: 15px;
 }
 .saving{
     box-sizing: content-box;
     width: 352px;
-    height: 528px;
+    height: 528px; 
+    grid-column: 3/span 3;
+    margin-left: 40px;
+    grid-row: 3/span 3;
+    margin-top: 30px;
+
 }
 
-/* 함께 도전해서 재미있는 26주 */
+/* 함께 도전해서 재미있는 26주 섹션5 */
 .section5{
-    background: #5c6775;
     width: 100vw;
     height: 750px;
-    display: grid;
-    grid-template-columns: repeat(16,1fr);
-    grid-template-rows: repeat(16,minmax(50px,auto));
+    background: rgb(94, 103, 116);
 }
 /* div 메인 컨텐츠 5 */
 .main-contents5{
-    grid-column: 4/7;
-    grid-row: 4/5;
+    grid-column: 3/span 5;
+    grid-row: 4/span 2;
+    margin-top: 80px;
 }
 .main-contents5 h3,
 .main-contents5 p{
     color: #fff;
 }
 
-/* section5 제목 크기 */
-.main-contents5 h3{
-    width: 350px;
-}
-/* section5 문장 폰트 크기 */
-.main-contents5 p{
-    margin: 21px 0;
-    width: 350px;
-}
-
 /* section5 a 링크 */
 .main-contents5 a{
     display: block;
     color: #fff;
-    font-size: 1.5rem;
-    border: 1px solid #fff;
-    border-radius: 2px;
-    text-align: center;
     width: 256px;
-    height: 50px;
-    line-height: 3;
+}
+
+ .btn-arr-white{
+    display: inline-block;
+    width: 7px;
+    height: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 10px;
+    background-image: url('/images/home_arr2.png');
+    background-size: 7px 10px;
+    margin-left: 5px;
 }
 
 /* section5 이미지 */
@@ -393,29 +420,27 @@ p{
     width: 460px;
     height: 381px;
     grid-column: 10/14;
-    grid-row: 3/4;
+    grid-row: 4/span 2;
 }
 
-/* 해외 계좌 송금 */
+/* 해외 계좌 송금 섹션6 */
 /* section 6 전체 영역 */
 .section6{
-    background: #fff;
     width: 100vw;
+    background: #fafafa;
     height: 750px;
-    display: grid;
-    grid-template-columns: repeat(16,1fr);
-    grid-template-rows: repeat(16,1fr);
+    margin: 0 auto;
 }
 /* section6 메인 컨텐츠 위치 배치*/
 .main-contents6{
-    grid-column: 11/15;
-    grid-row: 5/8;
+    grid-column: 11/span 4;
+    grid-row: 6/span 3;
     /* background-image 크기 */
     width: 642px;
     height: 342px;
     background-image: url('../images/home_map.png');
+    margin-left: 30px;
 }
-
 
 /* section6 메인 컨텐츠 폰트 색 */
 .main-contents6 h3,
@@ -423,47 +448,60 @@ p{
 .main-contents6 a{
     color: #000;
 }
-
-/* section6 문장 폰트 크기 */
-.section6 p{
-    margin: 21px 0;
+.main-contents6 h3{
+    width: 350px;
+    margin: 0;
+}
+.main-contents6 p{
+    width: 350px;
 }
 
 /* section6 a 링크 */
 .main-contents6 a{
     display: block;
-    font-size: 1.5rem;
-    border: 1px solid #c2c2c2;
-    border-radius: 2px;
-    text-align: center;
     width: 256px;
-    height: 50px;
-    line-height: 3;
 }
 
 /* 이미지 */
 .home-phone{
-    width: 470px;
-    height: 610px;
-    grid-column: 4/8;
-    grid-row: 4/17;
+    width: 455px;
+    height: 643px;
+    grid-column: 2/span 4;
+    grid-row: 3/span 10;
+    margin-top: 20px;
+    margin-left: 20px;
+    opacity: 0;
+    /* transform: translateY(5rem); */
+}
+@keyframes slide-bottom {
+    from{
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+	to {
+		transform: none;
+        opacity: 1;
+    }
+}
+
+.home-phone-active{
+	animation: slide-bottom 0.4s 0.85s ease-in-out forwards;
 }
 
 /* section7 */
 .section7{
     width: 100vw;
     height: 930px;
-    background-color: #333b58;
-    display: grid;
-    grid-template-columns: repeat(16,1fr);
-    grid-template-rows: repeat(16,1fr);
+    background-color: rgb(69, 136, 214);
+    position: relative;
 }
 
 /* section7 메인 컨텐츠 */
 .main-contents7{
-    grid-column: 5/14;
-    grid-row: 4/ span2;
-    margin-left: 50px;
+    width: 100%;
+    grid-column: 3/span 12;
+    grid-row: 4/ span 2;
+    text-align: center;
 }
 
 /* 폰트 크기와 색상 */
@@ -471,50 +509,153 @@ p{
 .main-contents7 p,
 .main-contents7 a {
     color: #fff;
+    text-align: center;
 }
 
 .main-contents7 p{
-    text-indent: 120px;
+    margin-bottom: 0;
 }
 
-.main-contents7 a{
+.button-list{
+    padding-left: 0;
+}
+
+.main-contents7 li{
+    margin: 0;
+    padding: 0;
+    width: 165px;
+    height: 52px;
+    border: 1px solid #aaa;
+    list-style-type: none;
     display: inline-block;
-    border: 1px solid #fff;
-    width: 164px;
+}
+.list-style{
+    display: block;
+    font-size: 1.5rem;
+    line-height: 51px;
     height: 50px;
     border-radius: 2px;
-    margin: 5px 3px;
-    font-size: 1.5rem;
     text-align: center;
-    line-height: 3;
-}
-.main-contents7 a:first-of-type{
-    margin-left: 32px;
 }
 
 /* section7 이미지 크기 */
 .loan{
     width: 500px;
     height: 523px;
-    grid-column: 6/span 3;
-    grid-row: 8/17;
-    margin-left: 80px;
-    margin-bottom: 0;
+    grid-column: 5/span 5;
+    grid-row: 7/span 8;
+    margin: 25px 0 0 30px;
 }
 /* 달 그림 */
-.circle {
+/* .circle {
     background-color: transparent;
     width: 120px;
     height: 120px;
     border-radius: 50%;
     box-shadow: inset -25px 5px 0 3px #fff;
     transform: rotate(50deg);
-    grid-column: 14/span 2;
-    grid-row: 5/span 2;
+    grid-column: 15/span 2;
+    grid-row: 4/span 2;
+} */
+
+/* 별 애니메이션 */
+@keyframes bgiAni{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
+
+.section7::before, .section7::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: bgiAni 2000ms infinite alternate ease-in-out;
+}
+
+.section7::before{
+    background: url('/images/star1.png') no-repeat 150px 510px,
+    url('/images/star1.png') no-repeat 200px 110px,
+    url('/images/star1.png') no-repeat 350px 420px,
+    url('/images/star1.png') no-repeat 420px 710px,
+    url('/images/star1.png') no-repeat 1400px 510px,
+    url('/images/star1.png') no-repeat 1700px 710px,
+    url('/images/star1.png') no-repeat 1800px 200px,
+    url('/images/star1.png') no-repeat 1100px 100px;
+    animation-delay: 1000ms
+
+
+}
+.section7::after{
+    background: url('/images/star2.png') no-repeat 1400px 610px,
+    url('/images/star2.png') no-repeat 1200px 710px,
+    url('/images/star2.png') no-repeat 100px 110px,
+    url('/images/star2.png') no-repeat 1500px 210px,
+    url('/images/star2.png') no-repeat 800px 120px,
+    url('/images/star2.png') no-repeat 200px 800px
+}
+
+/* 해그림 */
+.circle2 {
+    background-color: transparent;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: rgb(254, 215, 8);
+    transform: rotate(50deg);
+    grid-column: 15/span 2;
+    grid-row: 4/span 2;
+}
+
+/* 해와 달*/
+@keyframes trans-sun {
+    from{
+        background-color: transparent;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: rgb(254, 215, 8);
+        transform: rotate(50deg);
+        grid-column: 15/span 2;
+        grid-row: 4/span 2;
+    }
+	to {
+        background-color: transparent;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        box-shadow: inset -25px 5px 0 3px #fff;
+        transform: rotate(50deg);
+        grid-column: 15/span 2;
+        grid-row: 4/span 2;
+    }
+}
+
+.section7-active1{
+	animation: trans-sun 0.4s 0.85s ease-in-out forwards;
+}
+/* 배경색 바꾸기 */
+@keyframes trans-bg {
+    from{
+        background-color: rgb(69, 136, 214);
+    }
+	to {
+        background-color: #333b58;
+    }
+}
+
+.section7-active2{
+	animation: trans-bg 0.4s 1.2s forwards;
+}
+
 
 /* 섹션8 - 캐러셀 */
 .section8{
+    width: 1100px;
+    margin: 0 auto;
     background: #fff;
     height: 1060px;
     padding-top: 170px;
@@ -532,7 +673,6 @@ p{
 }
 .section8-brief{
     line-height: 1.5;
-    margin-bottom: 30px;
     text-align: center;
 }
 /* 버튼 속성은 통일하여 사용할 수 있으나, 협업 시 알아보기 쉽도록 따로 씀 */
@@ -568,14 +708,11 @@ p{
 .section9{
     background-color: rgb(247, 247, 247);
     height: 1045px;
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, minmax(50px, auto));
 }
 .section9-heading{
     margin: 0;
     text-align: center;
-    grid-column: 4/ span 8;
+    grid-column: 5/ span 8;
     grid-row: 4/ span 2;
 }
 .marketing{
@@ -583,12 +720,15 @@ p{
     padding-left: 0;
     display: flex;
     justify-content: space-between;
-    grid-column: 3/ span 10;
-    grid-row: 12/ span 3;
+    grid-column: 2/ span 11;
+    grid-row: 13/ span 3;
+    width: 1020px;
+    margin-left: 30px;
 }
 .marketing em{
     font-style: normal;
     font-size: 2.0rem;
+    font-weight: 400;
 }
 [class^="marketing-copy"]{
     text-align: center;
@@ -603,13 +743,14 @@ p{
 }
 .marketing-copy3{
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: 60px;
 }
 .section9 img{
     width: 1020px;
     height: 270px;
-    grid-column: 3/ span 10;
-    grid-row: 8/ span 3;
+    grid-column: 2/ span 11;
+    grid-row: 10/ span 3;
+    margin-bottom: 30px;
 }
 .section9-middle-bar{
     display: inline-block;
@@ -617,8 +758,9 @@ p{
     height: 2px;
     background: #000;
     margin: 0 auto;
-    grid-column: 7/ span 2;
+    grid-column: 8/ span 2;
     grid-row: 6/ span 1;
+    margin-top: 40px;
 }
 
 /* 푸터 */
@@ -626,7 +768,7 @@ p{
     background: #EEEEEE;
 }
 .footer{
-    padding-top: 15px;
+    padding: 37px 0 12px 0;
     height: 160px;
     width: 1100px;
     background: #EEEEEE;
@@ -639,7 +781,8 @@ p{
     list-style: none;
     padding-left: 0;
 
-}.service-use li:nth-child(n+2)::before{
+}
+.service-use li:nth-child(n+2)::before{
     content:"ㅣ";
     color: #aaa;
     padding-right:20px;
@@ -647,30 +790,36 @@ p{
 .service-use li{
     display: inline-block;
 
-}.service-use a{
+}
+.service-use a{
     padding: 8px 0;
 
-}.address,.copyright{
+}
+.address,.copyright{
     display: inline-block;
-}.address,.copyright{
+}
+.address,.copyright{
     font-size: 12px;
 }
 .address{
     font-style: normal;
     /* background:yellow; */
 
-}.copyright{
+}
+.copyright{
     /* background: skyblue; */
     margin-left: 5px;
 
-}.footer-bottom{
+}
+.footer-bottom{
     margin-top: 20px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     /* background: pink; */
    
 
 
-}.footer-bottom::after{
+}
+.footer-bottom::after{
     content:'';
     display: block;
     clear: both;
@@ -682,35 +831,38 @@ p{
     float: left;
     margin: 0;
    
-}.web-accessiblilty-insurance img{
+}
+.web-accessiblilty-insurance img{
     width: 48px;
     height: 32px;
 }
 
 .web-accessiblilty-insurance figcaption{
-    font-size: 16px;
+    font-size: 14px;
     line-height: 35px;
     padding-left: 5px;
    
 }
 .share-information{
-   
-    
+
     list-style: none;
     margin: 0;
-    padding-left: 0;
+    /* margin-left: 20px; */
     float: right;
     display: flex;
     width: 134px;
+    padding-left: 0;
     
 }
 .facebook-icon,.blog-icon,.naverpost-icon,.youtube-icon{
+
     background-image: url("/images/img_kabang.png");
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
     text-indent: 25px;
     padding: 0 10px;
+    margin-right: 15px;
 
 
 }
