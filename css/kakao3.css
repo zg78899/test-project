@@ -1,28 +1,65 @@
 @charset "utf-8";
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 
 *, *::before, *::after{
     box-sizing: border-box;
+    font-family: 'Spoqa Han Sans', 'Sans-serif';
 }
 html{
     font-size: 10px;
 }
 body{
     margin: 0;
+    min-width: 1300px;
+    font-weight: 200;
 }
 a{
     text-decoration: none;
     color: #000;
     font: inherit;
 }
+.section2 h3, .section3 h3, .section4 h3, .section5 h3, .section6 h3, .section7 h3, .section8 h3, .section9 h3{
+    font-weight: 300;
+    margin: 0;
+    font-size: 3.9rem;
+}
+p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 1.5;
+    padding-top: 21px;
+    padding-bottom: 30px;
+}
 .a11y-hidden {
     position: absolute;
     height: 1px;
     width: 1px;
     overflow: hidden;
-    clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
  }
+ /* 버튼 arr */
+ .btn-arr{
+    display: inline-block;
+    width: 7px;
+    height: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 10px;
+    background-image: url('/images/home_arr.png');
+    background-size: 7px 10px;
+    margin-left: 5px;
+}
+/* 버튼 공통 속성 */
+.btn-common{
+    font-size: 1.5rem;
+    line-height: 51px;
+    height: 50px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    text-align: center;
+}
+
 /* 헤더 영역 */
 .header{
     background: #fff;
@@ -54,7 +91,7 @@ a{
     padding: 30px 20px;
 }
 .main-menu .main-menu-list:hover, .main-menu .main-menu-list:active{
-    box-shadow: 0 2px 0 0 #000;
+    box-shadow: inset 0 -2px 0 0 #000;
 }
 .main-menu a{
     padding: 30px 0;
@@ -64,10 +101,10 @@ a{
 }
 .sub-container{
     background: #fff;
-    padding: 60px 120px 35px 120px;
+    padding: 60px 240px 35px 240px;
     position: absolute;
     width: 100%;
-    top: 80px;
+    top: 83px;
     left: 0;
     display: none;
 }
@@ -104,8 +141,8 @@ a{
 }
 .section1-heading{
     margin: 0;
-    font-weight: 200;
-    font-size: 5.5rem;
+    font-size: 5.3rem;
+    font-weight: 100;
     text-align: center;
     color: #fff;
     position: relative;
@@ -113,8 +150,7 @@ a{
 }
 .move-download-app{
     padding-left: 0;
-    font-size: 2.2rem;
-    font-weight: 200;
+    font-size: 2rem;
     display: flex;
     justify-content: space-between;
     width: 455px;
@@ -131,6 +167,10 @@ a{
     border-radius: 5px;
     color: #fff;
     line-height: 2.9;
+    font-weight: 100;
+}
+.move-download-app a:hover{
+    text-decoration: underline;
 }
 .move-playstore, .move-appstore{
     text-align: center;
@@ -164,7 +204,8 @@ a{
     position: absolute;
     bottom: 30px;
     right: 30px;
-    font-size: 2.0rem;
+    font-size: 1.7rem;
+    font-weight: 500;
     box-shadow: #333 2px 2px 2px;
     display: flex;
     justify-content: space-between;
@@ -172,6 +213,7 @@ a{
 }
 .btn-loandoc-submit span{
     font-size: 1.4rem;
+    font-weight: 400;
 }
 .btn-bar{
     display: inline-block;
@@ -192,113 +234,290 @@ a{
 /* 섹션 2 */
 .section2{
     height: 750px;
-    background-color: rgb(251,251,251);
+    background-color: #fff;
     display: grid;
-    grid-template-columns: repeat(16, 100px);
+    grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, minmax(50px, auto));
 }
 .section2-explain{
-    grid-row: 7/ span 4;
-    grid-column: 9/ span 4;
+    grid-row: 6/ span 4;
+    grid-column: 10/ span 4;
 }
 .section2-heading{
-    font-size: 4.0rem;
-    font-weight: 200;
     margin: 0;
     margin-bottom: 20px;
 }
 .section2-brief{
-    font-size: 1.6rem;
-    font-weight: 200;
     line-height: 1.5;
-    margin-bottom: 30px;
 }
 .btn_account{
     display: inline-block;
-    font-size: 1.7rem;
     width: 258px;
+    text-align: center;
+}
+.section2 img{
+    width: 456px;
+    height: 551px;
+    grid-row: 3/ span 8;
+    grid-column: 4/ span 3;
+}
+
+/* 섹션 3,4 */
+.section3{
+    height: 840px;
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 80px 70px 190px;
+    /* margin: 0 auto; */
+    /* width: 990px; */
+    background: #fafafa;
+    
+   
+}.section3::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.deposit{
+    
+    float: left;
+    display: block;
+    /* border: 1px solid #aaa; */
+    margin-top: 200px;
+    
+
+}
+.deposit-heading{  
+    /* background: #008000; */
+    padding: 0;
+    margin: 0;
+}
+
+.deposit a{
+    display: inline-block;
+    width: 158px;
+    /* background: orange; */
+}
+.term{
+    width: 522px;
+    height: 124px;
+    /* background: yellow; */
+    display: block;
+    margin-top: 20px;
+
+}.phones{
+    float: right;
+   
+    /* background: white; */
+}
+.phone2{
+    width: 460px;
+    height: 680px;
+    /* background: purple; */
+
+    
+}.section4{
+
+    padding: 130px 0 150px 0;
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    width: 850px;
+    /* background: yellow; */
+    
+
+}.saving-account-heading{
+    margin: 0;
+}
+.saving-account p{
+    font-size: 15px;
+}
+.saving-account a{
+    line-height: 52px;
+    border: 1px solid #000000;
+    width: 260px;
     height: 52px;
-    border: 1px solid #aaa;
-    border-radius: 3px;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+}
+.saving{
+    box-sizing: content-box;
+    width: 352px;
+    height: 528px;
+}
+
+/* 함께 도전해서 재미있는 26주 */
+.section5{
+    background: #5c6775;
+    width: 100vw;
+    height: 750px;
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(16,minmax(50px,auto));
+}
+/* div 메인 컨텐츠 5 */
+.main-contents5{
+    grid-column: 4/7;
+    grid-row: 4/5;
+}
+.main-contents5 h3,
+.main-contents5 p{
+    color: #fff;
+}
+
+/* section5 제목 크기 */
+.main-contents5 h3{
+    width: 350px;
+}
+/* section5 문장 폰트 크기 */
+.main-contents5 p{
+    margin: 21px 0;
+    width: 350px;
+}
+
+/* section5 a 링크 */
+.main-contents5 a{
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    text-align: center;
+    width: 256px;
+    height: 50px;
+    line-height: 3;
+}
+
+/* section5 이미지 */
+.twenty-six-weeks{
+    width: 460px;
+    height: 381px;
+    grid-column: 10/14;
+    grid-row: 3/4;
+}
+
+/* 해외 계좌 송금 */
+/* section 6 전체 영역 */
+.section6{
+    background: #fff;
+    width: 100vw;
+    height: 750px;
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(16,1fr);
+}
+/* section6 메인 컨텐츠 위치 배치*/
+.main-contents6{
+    grid-column: 11/15;
+    grid-row: 5/8;
+    /* background-image 크기 */
+    width: 642px;
+    height: 342px;
+    background-image: url('../images/home_map.png');
+}
+
+
+/* section6 메인 컨텐츠 폰트 색 */
+.main-contents6 h3,
+.main-contents6 p,
+.main-contents6 a{
+    color: #000;
+}
+
+/* section6 문장 폰트 크기 */
+.section6 p{
+    margin: 21px 0;
+}
+
+/* section6 a 링크 */
+.main-contents6 a{
+    display: block;
+    font-size: 1.5rem;
+    border: 1px solid #c2c2c2;
+    border-radius: 2px;
+    text-align: center;
+    width: 256px;
+    height: 50px;
+    line-height: 3;
+}
+
+/* 이미지 */
+.home-phone{
+    width: 470px;
+    height: 610px;
+    grid-column: 4/8;
+    grid-row: 4/17;
+}
+
+/* section7 */
+.section7{
+    width: 100vw;
+    height: 930px;
+    background-color: #333b58;
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(16,1fr);
+}
+
+/* section7 메인 컨텐츠 */
+.main-contents7{
+    grid-column: 5/14;
+    grid-row: 4/ span2;
+    margin-left: 50px;
+}
+
+/* 폰트 크기와 색상 */
+.main-contents7 h3,
+.main-contents7 p,
+.main-contents7 a {
+    color: #fff;
+}
+
+.main-contents7 p{
+    text-indent: 120px;
+}
+
+.main-contents7 a{
+    display: inline-block;
+    border: 1px solid #fff;
+    width: 164px;
+    height: 50px;
+    border-radius: 2px;
+    margin: 5px 3px;
+    font-size: 1.5rem;
     text-align: center;
     line-height: 3;
 }
-.btn_account span{
-    display: inline-block;
-    width: 7px;
-    height: 10px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-indent: 10px;
-    background-image: url('/images/home_arr.png');
-    background-size: 7px 10px;
-    margin-left: 5px;
+.main-contents7 a:first-of-type{
+    margin-left: 32px;
 }
-.section2 img{
-    widows: 456px;
-    height: 551px;
-    grid-row: 3/ span 8;
-    grid-column: 3/ span 3;
+
+/* section7 이미지 크기 */
+.loan{
+    width: 500px;
+    height: 523px;
+    grid-column: 6/span 3;
+    grid-row: 8/17;
+    margin-left: 80px;
+    margin-bottom: 0;
 }
-/* 섹션9 */
-.section9{
-    background-color: rgb(247, 247, 247);
-    height: 1045px;
-    display: grid;
-    grid-template-columns: repeat(16, 100px);
-    grid-template-rows: repeat(16, minmax(50px, auto));
+/* 달 그림 */
+.circle {
+    background-color: transparent;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset -25px 5px 0 3px #fff;
+    transform: rotate(50deg);
+    grid-column: 14/span 2;
+    grid-row: 5/span 2;
 }
-.section9-heading{
-    font-size: 4.0rem;
-    font-weight: 200;
-    margin: 0;
-    text-align: center;
-    grid-column: 4/ span 8;
-    grid-row: 4/ span 2;
-}
-.marketing{
-    list-style-type: none;
-    padding-left; 0;
-    display: flex;
-    justify-content: space-between;
-    grid-column: 3/ span 10;
-    grid-row: 12/ span 3;
-}
-.marketing em{
-    font-style: normal;
-    font-size: 2.0rem;
-}
-[class^="marketing-copy"]{
-    text-align: center;
-}
-[class^="marketing-copy"] p{
-    font-size: 1.4rem;
-    font-weight: 200;
-    line-height: 1.5;
-    color: #666;
-}
-.marketing-copy2{
-    width: 350px;
-}
-.marketing-copy3{
-    margin-left: auto;
-    margin-right: 20px;
-}
-.section9 img{
-    width: 1020px;
-    height: 270px;
-    grid-column: 3/ span 10;
-    grid-row: 8/ span 3;
-}
-.section9-middle-bar{
-    display: inline-block;
-    width: 100px;
-    height: 2px;
-    background: #000;
-    margin: 0 auto;
-    grid-column: 7/ span 2;
-    grid-row: 6/ span 1;
-}
+
 /* 섹션8 - 캐러셀 */
 .section8{
     background: #fff;
@@ -312,17 +531,12 @@ a{
 }
 /* 하단 두 속성은 통일하여 사용할 수 있으나, 협업 시 알아보기 쉽도록 따로 씀 */
 .section8-heading{
-    font-size: 4.0rem;
-    font-weight: 200;
     margin: 0;
     text-align: center;
     margin-bottom: 30px;
 }
 .section8-brief{
-    font-size: 1.6rem;
-    font-weight: 200;
     line-height: 1.5;
-    margin-bottom: 30px;
     text-align: center;
 }
 /* 버튼 속성은 통일하여 사용할 수 있으나, 협업 시 알아보기 쉽도록 따로 씀 */
@@ -352,4 +566,181 @@ a{
     width: 280px;
     height: 443px;
     margin: 0 auto;
+}
+
+/* 섹션9 */
+.section9{
+    background-color: rgb(247, 247, 247);
+    height: 1045px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, minmax(50px, auto));
+}
+.section9-heading{
+    margin: 0;
+    text-align: center;
+    grid-column: 5/ span 8;
+    grid-row: 4/ span 2;
+}
+.marketing{
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    grid-column: 3/ span 10;
+    grid-row: 12/ span 3;
+    width: 1020px;
+    margin-left: 50px;
+}
+.marketing em{
+    font-style: normal;
+    font-size: 2.0rem;
+    font-weight: 400;
+}
+[class^="marketing-copy"]{
+    text-align: center;
+}
+[class^="marketing-copy"] p{
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #666;
+}
+.marketing-copy2{
+    width: 350px;
+}
+.marketing-copy3{
+    margin-left: auto;
+    margin-right: 60px;
+}
+.section9 img{
+    width: 1020px;
+    height: 270px;
+    grid-column: 3/ span 10;
+    grid-row: 9/ span 3;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.section9-middle-bar{
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    background: #000;
+    margin: 0 auto;
+    grid-column: 8/ span 2;
+    grid-row: 6/ span 1;
+    margin-top: 25px;
+}
+
+/* 푸터 */
+.footer-bg{
+    background: #EEEEEE;
+}
+.footer{
+    padding-top: 15px;
+    height: 160px;
+    width: 1100px;
+    background: #EEEEEE;
+    margin: 0 auto;
+
+}.service-use{
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+
+}.service-use li:nth-child(n+2)::before{
+    content:"ㅣ";
+    color: #aaa;
+    padding-right:20px;
+}
+.service-use li{
+    display: inline-block;
+
+}.service-use a{
+    padding: 8px 0;
+
+}.address,.copyright{
+    display: inline-block;
+}.address,.copyright{
+    font-size: 12px;
+}
+.address{
+    font-style: normal;
+    /* background:yellow; */
+
+}.copyright{
+    /* background: skyblue; */
+    margin-left: 5px;
+
+}.footer-bottom{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    /* background: pink; */
+   
+
+
+}.footer-bottom::after{
+    content:'';
+    display: block;
+    clear: both;
+
+}
+.web-accessiblilty-insurance{
+    display: flex;
+    /* background: purple; */
+    float: left;
+    margin: 0;
+   
+}.web-accessiblilty-insurance img{
+    width: 48px;
+    height: 32px;
+}
+
+.web-accessiblilty-insurance figcaption{
+    font-size: 16px;
+    line-height: 35px;
+    padding-left: 5px;
+   
+}
+.share-information{
+   
+    
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    float: right;
+    display: flex;
+    width: 134px;
+    
+}
+.facebook-icon,.blog-icon,.naverpost-icon,.youtube-icon{
+    background-image: url("/images/img_kabang.png");
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 25px;
+    padding: 0 10px;
+
+
+}
+.facebook-icon{
+    width: 10px;
+    height: 20px;
+    background-position: 29% 97%;
+}
+.blog-icon{
+    width: 14px;
+    height: 20px;
+    background-position: 34% 97%;
+}
+.naverpost-icon{
+    width: 14px;
+    height: 20px;
+    background-position: 97% 97%;
+}
+.youtube-icon{
+    width: 25px;
+    height: 20px;
+    background-position: 40% 96%;
 }
