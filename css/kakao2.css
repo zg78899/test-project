@@ -668,7 +668,8 @@ p{
     list-style: none;
     padding-left: 0;
 
-}.service-use li:nth-child(n+2)::before{
+}
+.service-use li:nth-child(n+2)::before{
     content:"ㅣ";
     color: #aaa;
     padding-right:20px;
@@ -676,30 +677,36 @@ p{
 .service-use li{
     display: inline-block;
 
-}.service-use a{
+}
+.service-use a{
     padding: 8px 0;
 
-}.address,.copyright{
+}
+.address,.copyright{
     display: inline-block;
-}.address,.copyright{
+}
+.address,.copyright{
     font-size: 12px;
 }
 .address{
     font-style: normal;
     /* background:yellow; */
 
-}.copyright{
+}
+.copyright{
     /* background: skyblue; */
     margin-left: 5px;
 
-}.footer-bottom{
+}
+.footer-bottom{
     margin-top: 20px;
     /* padding-bottom: 20px; */
     /* background: pink; */
    
 
 
-}.footer-bottom::after{
+}
+.footer-bottom::after{
     content:'';
     display: block;
     clear: both;
@@ -711,7 +718,8 @@ p{
     float: left;
     margin: 0;
    
-}.web-accessiblilty-insurance img{
+}
+.web-accessiblilty-insurance img{
     width: 48px;
     height: 32px;
 }
