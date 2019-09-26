@@ -557,6 +557,9 @@ p{
     height: 50px;
     border-radius: 2px;
     text-align: center;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
 }
 
 /* section7 이미지 크기 */
