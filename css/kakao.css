@@ -174,6 +174,7 @@ p{
     background-size: cover;
     background-position-y: 50%;
     position: relative;
+    border-top: 1px solid transparent;
 }
 
 .section1-heading{
@@ -183,7 +184,7 @@ p{
     font-weight: 100;
     text-align: center;
     color: #fff;
-    padding-top: 228px;
+    margin-top: 228px;
 }
 .move-download-app{
     padding-left: 0;
