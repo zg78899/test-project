@@ -281,7 +281,7 @@ p{
     grid-auto-rows: minmax(50px,auto);
 }
 .section2-explain{
-    grid-row: 6/ span 4;
+    grid-row: 6/ span 1;
     grid-column: 10/ span 4;
     width: 360px;
     margin-left: 40px;
