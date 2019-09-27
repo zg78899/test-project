@@ -70,7 +70,7 @@ p{
 .wrapper-grid{
     display: grid;
     grid-template-columns: repeat(16,1fr);
-    grid-template-rows: repeat(16,minmax(50px,auto));
+    grid-auto-rows: minmax(50px,auto);
 }
 
 /* 헤더 영역 */
@@ -174,6 +174,7 @@ p{
     background-size: cover;
     background-position-y: 50%;
     position: relative;
+    border-top: 1px solid transparent;
 }
 
 .section1-heading{
@@ -183,7 +184,7 @@ p{
     font-weight: 100;
     text-align: center;
     color: #fff;
-    padding-top: 228px;
+    margin-top: 228px;
 }
 .move-download-app{
     padding-left: 0;
@@ -277,10 +278,10 @@ p{
     background-color: #fff;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, minmax(50px, auto));
+    grid-auto-rows: minmax(50px,auto);
 }
 .section2-explain{
-    grid-row: 6/ span 4;
+    grid-row: 6/ span 1;
     grid-column: 10/ span 4;
     width: 360px;
     margin-left: 40px;
@@ -316,10 +317,6 @@ p{
     background: #fafafa;
     white-space: nowrap;
     /* background: orange; */
-}
-.section3-po{
-    position: relative;
-    width: 1100px;
 }
 .deposit{
     padding-top: 210px;
@@ -378,11 +375,11 @@ p{
     height: 800px;
     display: grid;
     grid-template-columns: repeat(16,1fr);
-    grid-template-rows:repeat(16,minmax(50px,auto)); 
+    grid-auto-rows: minmax(50px,auto);
 }
 .saving-account{
     grid-column: 10/span 6;
-    grid-row: 6;
+    grid-row: 4/span 1;
     margin-left: 40px;
 }
 .btn-common{
@@ -450,7 +447,6 @@ p{
     width: 100vw;
     background: #fafafa;
     height: 750px;
-    margin: 0 auto;
 }
 /* section6 메인 컨텐츠 위치 배치*/
 .main-contents6{
@@ -557,6 +553,9 @@ p{
     height: 50px;
     border-radius: 2px;
     text-align: center;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
 }
 
 /* section7 이미지 크기 */
@@ -626,7 +625,6 @@ p{
     height: 120px;
     border-radius: 50%;
     background-color: rgb(254, 215, 8);
-    transform: rotate(50deg);
     grid-column: 15/span 2;
     grid-row: 4/span 2;
 }
@@ -639,7 +637,6 @@ p{
         height: 120px;
         border-radius: 50%;
         background-color: rgb(254, 215, 8);
-        transform: rotate(50deg);
         grid-column: 15/span 2;
         grid-row: 4/span 2;
     }
