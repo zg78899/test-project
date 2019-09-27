@@ -31,42 +31,42 @@ window.addEventListener('scroll', () => {
 });
 
 // 헤더 hover시 헤더 css스타일 변경
-var $header = document.querySelector('.header');
-var $textColor=document.querySelectorAll('.mouse-on');
-var $textColor2=document.querySelectorAll('.main-menu-list > a');
-var $logoImage=document.querySelector('.kakao-logo > a > img');
-var $subCon=document.querySelectorAll('.sub-container');
+var header = document.querySelector('.header');
+var textColor=document.querySelectorAll('.mouse-on');
+var textColor2=document.querySelectorAll('.main-menu-list > a');
+var logoImage=document.querySelector('.kakao-logo > a > img');
+var subCon=document.querySelectorAll('.sub-container');
 
 
-for(var i = 0; i < $textColor.length; i++){
+for(var i = 0; i < textColor.length; i++){
 
-    $textColor[i].addEventListener('mouseover', function(){
+    textColor[i].addEventListener('mouseover', function(){
         console.log('호버1');
-        $header.style.background = "#fff";
+        header.style.background = "#fff";
                 for(var i = 0; i < $textColor.length; i++){
-            $textColor2[i].style.color="black";
+            textColor2[i].style.color="black";
         }
-        $logoImage.src="./images/logo_black.svg";
+        logoImage.src="./images/logo_black.svg";
     });
 }
-for(var i = 0; i < $subCon.length; i++){
+for(var i = 0; i < subCon.length; i++){
     
     console.log('빙글빙글')
-    $subCon[i].addEventListener('mouseleave', function(){
+    subCon[i].addEventListener('mouseleave', function(){
         console.log('호버2');
         if(window.pageYOffset >=90){
             $header.style.background = "#fff";
-            for(var i = 0; i < $textColor.length; i++){
-                $textColor2[i].style.color="black";
+            for(var i = 0; i < textColor.length; i++){
+                textColor2[i].style.color="black";
             }
-            $logoImage.src="./images/logo_black.svg";
+            logoImage.src="./images/logo_black.svg";
     
         }else {
-            $header.style.background = "none";
-            for(var i = 0; i < $textColor.length; i++){
-                $textColor2[i].style.color="#fff";
+            header.style.background = "none";
+            for(var i = 0; i < textColor.length; i++){
+                textColor2[i].style.color="#fff";
             }
-            $logoImage.src="./images/logo_white.svg";
+            logoImage.src="./images/logo_white.svg";
         }
         
     });   
@@ -74,11 +74,11 @@ for(var i = 0; i < $subCon.length; i++){
 
 document.querySelector('.event').addEventListener('mouseleave', function(){
     console.log('호버3');
-    $header.style.background = "none";
-            for(var i = 0; i < $textColor.length; i++){
-        $textColor2[i].style.color="#fff";
+    header.style.background = "none";
+            for(var i = 0; i < textColor.length; i++){
+        textColor2[i].style.color="#fff";
     }
-    $logoImage.src="./images/logo_white.svg";
+    logoImage.src="./images/logo_white.svg";
 });
 
 
@@ -88,18 +88,18 @@ console.log($header);
 window.onscroll= function(){
     if(window.pageYOffset >=90){
         // console.log('hi');
-        $header.style.background = "#fff";
-        for(var i = 0; i < $textColor.length; i++){
-            $textColor2[i].style.color="black";
+        header.style.background = "#fff";
+        for(var i = 0; i < textColor.length; i++){
+            textColor2[i].style.color="black";
         }
-        $logoImage.src="./images/logo_black.svg";
+        logoImage.src="./images/logo_black.svg";
 
     }else{
-        $header.style.background ="none";
-        for(var i = 0; i < $textColor.length; i++){
-            $textColor2[i].style.color="#fff";
+        header.style.background ="none";
+        for(var i = 0; i < textColor.length; i++){
+            textColor2[i].style.color="#fff";
         }
-        $logoImage.src="./images/logo_white.svg";
+        logoImage.src="./images/logo_white.svg";
 
     }
        
