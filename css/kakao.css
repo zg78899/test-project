@@ -70,7 +70,7 @@ p{
 .wrapper-grid{
     display: grid;
     grid-template-columns: repeat(16,1fr);
-    grid-template-rows: repeat(16,minmax(50px,auto));
+    grid-auto-rows: minmax(50px,auto);
 }
 
 /* 헤더 영역 */
@@ -278,7 +278,7 @@ p{
     background-color: #fff;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, minmax(50px, auto));
+    grid-auto-rows: minmax(50px,auto);
 }
 .section2-explain{
     grid-row: 6/ span 4;
@@ -375,11 +375,11 @@ p{
     height: 800px;
     display: grid;
     grid-template-columns: repeat(16,1fr);
-    grid-template-rows:repeat(16,minmax(50px,auto)); 
+    grid-auto-rows: minmax(50px,auto);
 }
 .saving-account{
     grid-column: 10/span 6;
-    grid-row: 6;
+    grid-row: 4/span 1;
     margin-left: 40px;
 }
 .btn-common{
