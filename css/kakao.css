@@ -39,6 +39,7 @@ p{
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
  }
+
  /* 버튼 arr */
  .btn-arr{
     display: inline-block;
@@ -60,7 +61,13 @@ p{
     border-radius: 2px;
     text-align: center;
 }
-
+.wrapper-main-menu{
+    width:1100px;
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
 /* 가로 1100px 고정 및 그리드 */
 .wrapper{
     width: 1100px;
@@ -88,7 +95,7 @@ p{
     width: 116px;
     height: 20px;
     margin-top: 20px;
-    /* position: relative; */
+    position: relative;
 }
 .main-menu{
     font-size: 1.5rem;
@@ -124,6 +131,7 @@ p{
     left: 0;
     display: none;
 }
+
 /* 보이기 메뉴 */
 .show > div{
     background: #fff;
@@ -225,12 +233,14 @@ p{
     height: 35px;
     margin-right: 10px;
 }
+
 .move-playstore span{
     background-position: 86% 81%;
 }
 .move-appstore span{
     background-position: 95% 82%;
 }
+
 .btn-loandoc-submit{
     width: 340px;
     height: 65px;
@@ -312,22 +322,16 @@ p{
     height: 840px;
     display: flex;
     justify-content: space-between;
-    /* margin: 0 auto; */
-    /* width: 990px; */
     background: #fafafa;
     white-space: nowrap;
-    /* background: orange; */
 }
 .deposit{
     padding-top: 210px;
     margin-left: 100px;
     display: inline-block;
-    /* float: left; */
-    /* border: 1px solid #aaa; */
-    /* border: 1px solid #aaaa; */
 }
 .deposit-heading{  
-    /* background: #008000; */
+  
     padding: 0;
     margin: 0;
 }
@@ -350,10 +354,6 @@ p{
     height: 680px;
     transform: translateX(5rem);
     opacity: 0;
-    /* position: absolute;
-    left: 650px;
-    top: 125px; */
-    /* background: purple; */
 }
 
 @keyframes slide-right {
@@ -864,6 +864,9 @@ p{
     line-height: 35px;
     padding-left: 5px;
    
+}
+.web-accessiblilty-insurance figcaption:hover{
+   cursor: pointer; 
 }
 .share-information{
 
